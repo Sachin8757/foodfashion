@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* here btn is button classs */
+.btn {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 5px;
+    border: 2px solid rgb(10, 14, 255);
+    border-radius: 5px;
+    background-color: transparent;
+    /* background-color: black; */
+    color: rgb(10, 14, 255);
+    cursor: pointer;
+    padding: 10px;
+}
+.btn:hover{
+    border: 2px solid rgb(234, 19, 170);
+    color: #0814bf;
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
+
+.line {
+    width: 33px;
+    background-color: rgb(31, 28, 28);
+    height: 4px;
+    margin: 5px 5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+
+.username {
+    text-shadow: 0px 0px 10px rgb(232, 143, 143);
+}
+
+.box2 {
+    /* border:5px solid black; */
+    height: 700px;
+    width: 100vmax;
+    display: flex;
+    flex-direction: row;
+}
+
+.acount i {
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.res {
+    /* this is responce class for acount click */
+    display: none;
+    /* transition:all 5.5s ease-in-out; */
+
+}
+
+.card {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aco i {
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+    margin: 0px;
+}
+
+/* here to discribe navbar option */
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+}
+
+.rightnav {
+    display: flex;
+    /* align-items:center; */
+    justify-content: end;
+    width: 24%;
+    /* text-align: right; */
+    /* padding:0 23px; */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    padding: 20px;
+    font-size: 20px;
+}
+
+.nav-list li a:hover {
+    color: #396eeb;
+}
+
+/* here to discribe box1/ username box */
+
+
+.username {
+    margin: 5px;
+    padding: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.background {
+    background: rgb(255, 255, 255)url(/images/background.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+/* here to create two new box left and right which belong from box2 */
+.left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    width: 50vmax;
+}
+
+/* here to create two new box text and button which belong from left box*/
+.text {
+    height: 40%;
+}
+
+.left p {
+    margin-top: 10px;
+    margin-left: 201px;
+    margin-right: 88px;
+    font-size: 24px;
+}
+
+.button {
+    margin-top: 50px;
+    height: 50%;
+    margin-right: 134px;
+}
+
+.btn2 {
+    margin-left: 250px;
+}
+
+.heder {
+    margin-top: 35px;
+}
+.heder:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+.paragraph:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    color: #1767ff;
+}
+
+.food {
+    margin-top: 30px;
+}
+/* here img class for image slider */
+.img{
+    background-image:url();
+  animation: changeImage 20s linear infinite;
+  transition:ease-in-out;
+}
+@keyframes changeImage {
+    0%{
+        background-image: url(/images/food1.png);
+    }
+    25%{
+        background-image: url(/images/food2.png);
+    }
+    50%{
+        background-image: url(/images/food3.png);
+    }
+    75%{
+        background-image: url(/images/food4.png);
+    }
+    100%{
+        background-image: url(/images/food5.png);
+    }
+}
+
+.image {
+    position: absolute;
+    overflow: hidden;
+}
+
+.burger {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5px;
+    top: 15px;
+}
+
+.burger:hover {
+    background-color: rgb(90, 80, 80);
+    color: white;
+    transition-duration: .5s;
+}
+
+/* here we difine micro for responsive website */
+@media(max-width:810px) {
+    .button {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box2 {
+        display: flex;
+
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-left: -137px;
+        flex-direction: column-reverse;
+        height: 950px;
+    }
+
+    .main {
+        height:700px;
+        display: flex;
+        flex-direction: column;
+        width: 100vmax;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 2px;
+        margin-right: 50px;
+    }
+
+    .image {
+        position: relative;
+        width: 300px;
+    }
+
+    .text p {
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 24px;
+    }
+}
+
+@media(max-width:982px) {
+    .image {
+        width: 430px;
+    }
+}
+
+
+@media(max-width:390px) {
+    .main {
+        /* margin-left: -100px; */
+        width: 100%;
+        height: 950px;
+    }
+
+    .image {
+        margin-left: 17px;
+        margin-top: 200px;
+        width: 300px;
+    }
+
+    .box2 {
+        width: 100%;
+        margin-left: 30px;
+    }
+
+
+
+    .button {
+        padding: 0px;
+    }
+
+    .heder {
+        margin-top: -20px;
+
+    }
+
+    .left {
+        margin-left: 0px;
+    }
+
+    .text {
+        margin-left: 1px;
+    }
+
+    .left p {
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 24px;
+    }
+
+    .food {
+        margin-top: -294px;
+    }
+}
+
+@media(max-width:510px) {
+    .main {
+        /* margin-left: -100px; */
+        width: 100%;
+        height: 950px;
+    }
+
+    .image {
+        margin-left: 17px;
+        margin-top: 200px;
+        width: 300px;
+    }
+
+    .box2 {
+        width: 100%;
+        margin-left: 30px;
+    }
+
+
+
+    .button {
+        padding: 0px;
+    }
+
+    .heder {
+        margin-top: -20px;
+
+    }
+
+    .left {
+        margin-left: 0px;
+    }
+
+    .text {
+        margin-left: 1px;
+    }
+
+    .left p {
+        margin-top: 5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 24px;
+    }
+
+    .food {
+        margin-top: -294px;
+    }
+}
+
+@media(max-width:770px) {
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .rightnav {
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+
+    }
+
+    .navbar {
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.7s ease-out;
+    }
+
+    .burger {
+        display: block;
+    }
+
+
+    .h-nav {
+        height: 55px;
+    }
+
+    .v-class {
+        opacity: 0;
+    }
+
+.image{
+    margin-top: 20px;
+}
+}
+.footer{
+    height: 100px;
+max-width: 100vmax;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.text-footer{
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

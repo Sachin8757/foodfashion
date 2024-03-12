@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/stylesheets/userorder.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <% user.orders.forEach(function(orders){ %>
+            <div class="order">
+                <h2>DateAt:- <%=orders.DateAt%></h2>
+                <% if(orders.Egg_pokora > 0){ %>
+                 <h3>Egg-pokora:- <%=orders.Egg_pokora%></h3>
+               <%  } %>
+     
+               <% if(orders.Aalo_pokora > 0){ %>
+                 <h3>Egg-pokora:- <%=orders.Aalo_pokora%></h3>
+               <% } %>
+     
+               <% if(orders.boil_egg > 0){ %>
+                 <h3>boil_egg:- <%=orders.boil_egg%></h3>
+               <%  } %>
+     
+               <% if(orders.pokora > 0){ %>
+                 <h3>pokora:- <%=orders.pokora%></h3>
+               <%  } %>
+     
+               <% if(orders.kacha_egg > 0){ %>
+                 <h3>kacha_egg:- <%=orders.kacha_egg%></h3>
+               <%  } %>
+     
+               <% if(orders.Egg_fry > 0){ %>
+                 <h3>Egg-Fry:- <%=orders.Egg_fry%></h3>
+               <%  } %>
+     
+               <% if(orders.Egg_omeletee > 0){ %>
+                 <h3>Egg-omelete:- <%=orders.Egg_omeletee%></h3>
+               <%  } %>
+     
+               <% if(orders.Egg_coch > 0){ %>
+                 <h3>Egg-coch:- <%=orders.Egg_coch%></h3>
+               <%  } %>
+     
+               <% if(orders.bred_pokora > 0){ %>
+                 <h3>bred-pokora:- <%=orders.bred_pokora%></h3>
+               <%  } %>
+             </div>
+      <%  }) %>
+
+    </div>
+    <a href="/">
+        <button class="btn">Home</button>
+      </a>
+      <a href="/order">
+        <button class="btn">Orders</button>
+      </a>
+</body>
+</html>

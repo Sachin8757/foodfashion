@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/allorder.css">
+  <title>Document</title>
+
+</head>
+<body>
+  <div class="body">
+    <% userorder.forEach(function(userorder){ %>
+        <div class="order">
+          <h2>User:-<%=userorder.user.fullname%></h2>
+            <h2>DateAt:- <%=userorder.DateAt%></h2>
+            <h2>Address:- <%=userorder.address%></h2>
+            <h2>Mobile-No:- <%=userorder.mobile_no%></h2>
+            <% if(userorder.Egg_pokora > 0){ %>
+             <h3>Egg-pokora:- <%=userorder.Egg_pokora%></h3>
+           <%  } %>
+ 
+           <% if(userorder.Aalo_pokora > 0){ %>
+             <h3>Egg-pokora:- <%=userorder.Aalo_pokora%></h3>
+           <% } %>
+ 
+           <% if(userorder.boil_egg > 0){ %>
+             <h3>boil_egg:- <%=userorder.boil_egg%></h3>
+           <%  } %>
+ 
+           <% if(userorder.pokora > 0){ %>
+             <h3>pokora:- <%=userorder.pokora%></h3>
+           <%  } %>
+ 
+           <% if(userorder.kacha_egg > 0){ %>
+             <h3>kacha_egg:- <%=userorder.kacha_egg%></h3>
+           <%  } %>
+ 
+           <% if(userorder.Egg_fry > 0){ %>
+             <h3>Egg-Fry:- <%=userorder.Egg_fry%></h3>
+           <%  } %>
+ 
+           <% if(userorder.Egg_omeletee > 0){ %>
+             <h3>Egg-omelete:- <%=userorder.Egg_omeletee%></h3>
+           <%  } %>
+ 
+           <% if(userorder.Egg_coch > 0){ %>
+             <h3>Egg-coch:- <%=userorder.Egg_coch%></h3>
+           <%  } %>
+ 
+           <% if(userorder.bred_pokora > 0){ %>
+             <h3>bred-pokora:- <%=userorder.bred_pokora%></h3>
+           <%  } %>
+         </div>
+  <%  }) %>
+
+</div>
+</body>
+</html>

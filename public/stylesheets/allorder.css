@@ -16,6 +16,7 @@
     margin: 20px 15px;
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
+
 }
 .order h3{
     font-size: 18px;

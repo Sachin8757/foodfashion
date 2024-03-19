@@ -87,11 +87,25 @@ router.post("/order",async function(req,res,next){
     address:req.body.address,
     mobile_no:req.body.mobile_no
   })
-
   user.orders.push(userorder._id)
   user.save();
-  res.redirect("/")
-})
+  let total=(userorder.Aalo_pokora*2.5)+(userorder.Egg_pokora*5)+(userorder.pokora*1)+(userorder.boil_egg*8)+(userorder.kacha_egg*7)+(userorder.Egg_fry*10)+(userorder.Egg_omeletee*10)+(userorder.Egg_coch*10)+(userorder.bred_pokora*5);
+  req.flash("totalprice",total);
+  // console.log(req.flash("totalprice"))
+  res.redirect("/order2");
+});
+
+// here to difine order2 function
+router.get('/order2',isLoggedIn, function(req,res){
+  let total=req.flash("totalprice");
+  res.render("order2",{total});
+});
+
+router.post('/order2'),isLoggedIn,function(req,res){
+
+  // user.orders.push(userorder._id)
+  // user.save();
+}
 
 // here i difine my order router
 router.get('/myorder',isLoggedIn,async function(req,res){
@@ -167,6 +181,11 @@ router.get('/allcontact',isLoggedIn,async function(req,res){
   }
 
 });
+// here a functionto send about page
+router.get('/about',isLoggedIn, function(req,res){
+  res.render("about");
+});
+
 
 // here i difine cheching function if user is login or not
 function isLoggedIn(req,res,next){

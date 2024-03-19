@@ -19,6 +19,7 @@ const userschema = mongoose.Schema({
         default:Date.now
       },
     address:String,
-    mobile_no:String
+    mobile_no:String,
+    price:String
 });
  module.exports = mongoose.model("orders",userschema);

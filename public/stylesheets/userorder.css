@@ -16,6 +16,11 @@
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
 }
+.order:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+    box-shadow: 0px 0px 10px #ca10a4;
+}
 .order h3{
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;

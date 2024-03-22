@@ -73,8 +73,8 @@ router.get('/order',isLoggedIn, async function(req,res){
 // here a function to order food
 router.post("/order",async function(req,res,next){
   const user=await userModel.findOne({username:req.session.passport.user});
-  const userorder = await orderModel.create({
-    Aalo_pokora:req.body.Aalo_pokora,
+  var userorder =new orderModel({
+   Aalo_pokora:req.body.Aalo_pokora,
     Egg_pokora:req.body.Egg_pokora,
     pokora:req.body.pokora,
     boil_egg:req.body.boil_egg,
@@ -83,28 +83,61 @@ router.post("/order",async function(req,res,next){
     Egg_omeletee:req.body.Egg_omeletee,
     Egg_coch:req.body.Egg_coch,
     bred_pokora:req.body.bred_pokora,
-    user:user._id,
-    address:req.body.address,
-    mobile_no:req.body.mobile_no
-  })
-  user.orders.push(userorder._id)
-  user.save();
-  let total=(userorder.Aalo_pokora*2.5)+(userorder.Egg_pokora*5)+(userorder.pokora*1)+(userorder.boil_egg*8)+(userorder.kacha_egg*7)+(userorder.Egg_fry*10)+(userorder.Egg_omeletee*10)+(userorder.Egg_coch*10)+(userorder.bred_pokora*5);
-  req.flash("totalprice",total);
-  // console.log(req.flash("totalprice"))
-  res.redirect("/order2");
-});
-
-// here to difine order2 function
-router.get('/order2',isLoggedIn, function(req,res){
-  let total=req.flash("totalprice");
-  res.render("order2",{total});
-});
-
-router.post('/order2'),isLoggedIn,function(req,res){
-
+    user:user._id
+  });
+  // const user=await userModel.findOne({username:req.session.passport.user});
+  // const userorder = await orderModel.create({
+  //   Aalo_pokora:req.body.Aalo_pokora,
+  //   Egg_pokora:req.body.Egg_pokora,
+  //   pokora:req.body.pokora,
+  //   boil_egg:req.body.boil_egg,
+  //   kacha_egg:req.body.kacha_egg,
+  //   Egg_fry:req.body.Egg_fry,
+  //   Egg_omeletee:req.body.Egg_omeletee,
+  //   Egg_coch:req.body.Egg_coch,
+  //   bred_pokora:req.body.bred_pokora,
+  //   user:user._id
+  // })
   // user.orders.push(userorder._id)
   // user.save();
+  // let total=(userorder.Aalo_pokora*2.5)+(userorder.Egg_pokora*5)+(userorder.pokora*1)+(userorder.boil_egg*8)  +(userorder.kacha_egg*7)+(userorder.Egg_fry*10)+(userorder.Egg_omeletee*10)+(userorder.Egg_coch*10)+(userorder.bred_pokora*5);
+  // req.flash("total",total)
+  req.flash({order},{userorder});
+  res.redirect("/orders");
+  });
+
+// here to difine order2 function
+router.get('/orders',isLoggedIn, function(req,res){
+   let userorder=req.flash({order});
+    const total=(userorder.Aalo_pokora*2.5)+(userorder.Egg_pokora*5)+(userorder.pokora*1)+(userorder.boil_egg*8)  +(userorder.kacha_egg*7)+(userorder.Egg_fry*10)+(userorder.Egg_omeletee*10)+(userorder.Egg_coch*10)+(userorder.bred_pokora*5);
+//  const total=req.flash("total");
+    console.log(total);
+  res.render("orders",{total});
+});
+
+router.post('/orders'),isLoggedIn,async function(req,res){
+  const price =req.flash("total");
+  const user=await userModel.findOne({username:req.session.passport.user});
+  let userorder=req.flash({order});
+  const orders = await orderModel.create({
+    Aalo_pokora:userorder.Aalo_pokora,
+    Egg_pokora:userorder.Egg_pokora,
+    pokora:userorder.pokora,
+    boil_egg:userorder.boil_egg,
+    kacha_egg:userorder.kacha_egg,
+    Egg_fry:userorder.Egg_fry,
+    Egg_omeletee:userorder.Egg_omeletee,
+    Egg_coch:userorder.Egg_coch,
+    bred_pokora:userorder.bred_pokora,
+    user:user._id,
+    address:req.body.address,
+    mobile_no:req.body.mobile_no,
+    price:price
+  });
+  console.log(orders)
+  // user.orders.push(userorder._id)
+  // user.save();
+res.redirect("/")
 }
 
 // here i difine my order router
@@ -123,7 +156,7 @@ router.get('/allorders',isLoggedIn,async function(req,res){
   }
 
 });
-// hete a function to give feedback
+// here a function to give feedback
 router.get('/feedback',isLoggedIn, function(req,res){
   res.render("feedback");
 });
@@ -182,7 +215,7 @@ router.get('/allcontact',isLoggedIn,async function(req,res){
 
 });
 // here a functionto send about page
-router.get('/about',isLoggedIn, function(req,res){
+router.get('/about',function(req,res){
   res.render("about");
 });
 

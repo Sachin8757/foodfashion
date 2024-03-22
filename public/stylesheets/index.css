@@ -34,15 +34,11 @@
 .main {
     display: flex;
     flex-direction: row;
-    height: 600px;
+    height:100%;
 }
 
-.username {
-    text-shadow: 0px 0px 10px rgb(232, 143, 143);
-}
 
 .box2 {
-    /* border:5px solid black; */
     height: 700px;
     width: 100vmax;
     display: flex;
@@ -57,27 +53,9 @@
 }
 
 .res {
-    /* this is responce class for acount click */
     display: none;
-    /* transition:all 5.5s ease-in-out; */
 
 }
-
-.card {
-    margin-top: 55px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.aco i {
-    display: flex;
-    justify-content: end;
-    padding-right: 30px;
-    margin: 0px;
-}
-
 /* here to discribe navbar option */
 .nav-list {
     display: flex;
@@ -109,21 +87,13 @@
     text-decoration: none;
     color: rgb(10, 10, 10);
     padding: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .nav-list li a:hover {
     color: #396eeb;
 }
 
-/* here to discribe box1/ username box */
-
-
-.username {
-    margin: 5px;
-    padding: 5px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
 .background {
     background: rgb(255, 255, 255)url(/images/background.jpg);
@@ -132,38 +102,6 @@
 }
 
 /* here to create two new box left and right which belong from box2 */
-.left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.right {
-    width: 50vmax;
-}
-
-/* here to create two new box text and button which belong from left box*/
-.text {
-    height: 40%;
-}
-
-.left p {
-    margin-top: 10px;
-    margin-left: 201px;
-    margin-right: 88px;
-    font-size: 24px;
-}
-
-.button {
-    margin-top: 50px;
-    height: 50%;
-    margin-right: 134px;
-}
-
-.btn2 {
-    margin-left: 250px;
-}
 
 .heder {
     margin-top: 35px;
@@ -178,37 +116,6 @@
     color: #1767ff;
 }
 
-.food {
-    margin-top: 30px;
-}
-/* here img class for image slider */
-.img{
-    background-image:url();
-  animation: changeImage 20s linear infinite;
-  transition:ease-in-out;
-}
-@keyframes changeImage {
-    0%{
-        background-image: url(/images/food1.png);
-    }
-    25%{
-        background-image: url(/images/food2.png);
-    }
-    50%{
-        background-image: url(/images/food3.png);
-    }
-    75%{
-        background-image: url(/images/food4.png);
-    }
-    100%{
-        background-image: url(/images/food5.png);
-    }
-}
-
-.image {
-    position: absolute;
-    overflow: hidden;
-}
 
 .burger {
     display: none;
@@ -223,167 +130,39 @@
     color: white;
     transition-duration: .5s;
 }
-
-/* here we difine micro for responsive website */
-@media(max-width:810px) {
-    .button {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .box2 {
-        display: flex;
-
-        margin-top: 100px;
-        justify-content: center;
-        align-items: center;
-        margin-left: -137px;
-        flex-direction: column-reverse;
-        height: 950px;
-    }
-
-    .main {
-        height:700px;
-        display: flex;
-        flex-direction: column;
-        width: 100vmax;
-    }
-
-    .left {
-        display: flex;
-        flex-direction: column;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-
-
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-left: 2px;
-        margin-right: 50px;
-    }
-
-    .image {
-        position: relative;
-        width: 300px;
-    }
-
-    .text p {
-        margin-top: 5px;
-        margin-left: 0px;
-        margin-right: 0px;
-        font-size: 24px;
-    }
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 65px;
+}
+.left img{
+    width: 380px;
+    height: 350px;
+}
+.left p{
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media(max-width:982px) {
-    .image {
-        width: 430px;
-    }
+.text-footer{
+    font-size: 25px;
+    margin-top: 50px;
+
 }
-
-
-@media(max-width:390px) {
-    .main {
-        /* margin-left: -100px; */
-        width: 100%;
-        height: 950px;
-    }
-
-    .image {
-        margin-left: 17px;
-        margin-top: 200px;
-        width: 300px;
-    }
-
-    .box2 {
-        width: 100%;
-        margin-left: 30px;
-    }
-
-
-
-    .button {
-        padding: 0px;
-    }
-
-    .heder {
-        margin-top: -20px;
-
-    }
-
-    .left {
-        margin-left: 0px;
-    }
-
-    .text {
-        margin-left: 1px;
-    }
-
-    .left p {
-        margin-top: 5px;
-        margin-left: 0px;
-        margin-right: 0px;
-        font-size: 24px;
-    }
-
-    .food {
-        margin-top: -294px;
-    }
+.button{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
-@media(max-width:510px) {
-    .main {
-        /* margin-left: -100px; */
-        width: 100%;
-        height: 950px;
-    }
-
-    .image {
-        margin-left: 17px;
-        margin-top: 200px;
-        width: 300px;
-    }
-
-    .box2 {
-        width: 100%;
-        margin-left: 30px;
-    }
-
-
-
-    .button {
-        padding: 0px;
-    }
-
-    .heder {
-        margin-top: -20px;
-
-    }
-
-    .left {
-        margin-left: 0px;
-    }
-
-    .text {
-        margin-left: 1px;
-    }
-
-    .left p {
-        margin-top: 5px;
-        margin-left: 0px;
-        margin-right: 0px;
-        font-size: 24px;
-    }
-
-    .food {
-        margin-top: -294px;
-    }
-}
-
 @media(max-width:770px) {
     .nav-list {
         display: flex;
@@ -419,29 +198,27 @@
     .v-class {
         opacity: 0;
     }
-
-.image{
-    margin-top: 20px;
-}
-}
-.footer{
-    height: 100px;
-max-width: 100vmax;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.text-footer{
-    font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 @media(max-width:480px) {
     .nav-list li a {
       padding: none;
       gap: 5px;
     }
-    .button {
-        display: flex;
+    .nav-list li a {
+        text-decoration: none;
+        color: rgb(10, 10, 10);
+        padding: 20px;
+        font-size: 25px;
+    }
+    .box2{
         flex-direction: column-reverse;
-      }
+    }
+    .left{
+        height: 100vmax;
+    
+    }
+    .text-footer{
+        font-size: 20px;
+        margin-top: 20px;
+    }
   }

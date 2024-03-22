@@ -1,16 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.btn{
+.btn {
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 5px;
     border: 2px solid rgb(10, 14, 255);
     border-radius: 5px;
-    background-color:transparent;
+    background-color: transparent;
     /* background-color: black; */
     color: rgb(10, 14, 255);
     cursor: pointer;
@@ -20,26 +20,28 @@
     margin-left: 55px;
 }
 
-.btn:hover{
+.btn:hover {
     border: 2px solid rgb(234, 19, 170);
     color: #0814bf;
     transform: scale(1.1);
     transition-duration: 500ms;
-  }
-
-  .background{
-    background: rgb(255, 255, 255)url(/images/background.jpg);
-        background-size: cover;
-        background-blend-mode: darken;
 }
-.main{
+
+.background {
+    background: rgb(255, 255, 255)url(/images/background.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.main {
     max-width: 100vmax;
-    height:700px;
+    height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card{
+
+.card {
     border-radius: 10px;
     box-shadow: 2px 2px 10px black;
     display: flex;
@@ -50,7 +52,8 @@
     width: 300px;
     padding: 10px;
 }
-.input{
+
+.input {
     border: none;
     border-bottom: 2px solid black;
     width: 260px;
@@ -59,13 +62,15 @@
     margin-left: 10px;
     margin: 5px;
 }
-.text{
+
+.text {
     background-color: transparent;
     margin: 10px;
     width: 260px;
     box-shadow: 0px 0px 5px rgb(250, 47, 233);
 }
-.heder{
+
+.heder {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 

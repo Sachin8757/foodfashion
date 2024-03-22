@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/order2.css">
+    <title>foodfashion</title>
+</head>
+
+<body>
+    <form action="/orders" method="post">
+    <div class="main background">
+            <div class="box1">
+                <div class="card">
+                    <input type="text" name="address" class="loction" placeholder="Delivery Location" required="true">
+                    <input type="text" name="mobile_no" class="loction" placeholder="Mobile No" required="true">
+
+                </div>
+                <div class="button">
+                    <div class="money">
+                        <h3><%=total%></h3>
+                    </div>
+                    
+                  <a href="">
+                    <button class="btn">Order</button>
+                  </a>
+                       
+                </div>
+            </div>
+       
+    </div>
+</form>
+</body>
+
+</html>

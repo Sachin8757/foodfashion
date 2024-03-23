@@ -5,6 +5,7 @@ const userschema = mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:"users"
     },
+    name:String,
     Aalo_pokora:Number,
     Egg_pokora:Number,
     pokora:Number,
@@ -17,9 +18,11 @@ const userschema = mongoose.Schema({
     DateAt: {
         type: Date,
         default:Date.now
-      },
+    },
     address:String,
     mobile_no:String,
+    mobile_no2:String,
+    pincode:String,
     price:String
 });
  module.exports = mongoose.model("orders",userschema);

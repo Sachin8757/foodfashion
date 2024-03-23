@@ -5,7 +5,6 @@ const orderModel = require("./order");
 const passport = require('passport');
 const localStrategy = require("passport-local");
 const { use } = require('passport');
-const order = require('./order');
 const feedbackModel = require('./feedback');
 const contactModel = require('./contact');
 passport.use(new localStrategy(userModel.authenticate()));
@@ -90,6 +89,8 @@ router.post("/order", async function (req, res, next) {
     pincode:req.body.pincode,
     name:req.body.name
   });
+  user.orders.push(orders._id);
+  user.save();
   const total = (orders.Aalo_pokora * 2.5) + (orders.Egg_pokora * 5) + (orders.pokora * 1) + (orders.boil_egg * 8) + (orders.kacha_egg * 7) + (orders.Egg_fry * 10) + (orders.Egg_omeletee * 10) + (orders.Egg_coch * 10) + (orders.bred_pokora * 5);
   req.flash("totalprice",total);
   req.flash("orderid",orders._id);
@@ -108,8 +109,8 @@ router.post("/final", async function (req, res, next) {
 
 // here i difine my order router
 router.get('/myorder', isLoggedIn, async function (req, res) {
-  const user = await userModel.findOne({ username: req.session.passport.user }).populate("orders")
-  res.render("userorder", {user});
+  const user = await userModel.findOne({username:req.session.passport.user}).populate('orders');
+  res.render('myorder',{user});
 });
 // here difind to  find allorders route function
 router.get('/allorders', isLoggedIn, async function (req, res) {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/order2.css">
+  <title>foodfashion</title>
+</head>
+
+<body>
+  <div class="main background">
+    <form action="/order2" method="post">
+      <div class="box1">
+        <div class="card">
+          <div class="order">
+            <% if(Eggpokora>0){ %>
+              <div class="food">
+                <img src="/images/Egg-pokora.jpg" alt="">
+                <div class="input">
+                  <h3>Egg-pokora:-</h3>
+                  <input type="number" name="Egg_pokora" id="egpo" placeholder="How much" required="true"
+                    class="Eggpokora">
+                </div>
+
+              </div>
+              <% } %>
+
+                <% if(Aalopokora> 0){ %>
+                  <div class="food">
+                    <img src="/images/aalopokora.jpg" alt="">
+                    <div class="input">
+                      <h3>Aalopokora</h3>
+                      <input type="number" name="Aalo_pokora" id="aalo" placeholder="How much" required="true"
+                        class="">
+                    </div>
+
+                  </div>
+                  <% } %>
+
+                    <% if(boilegg> 0){ %>
+                      <div class="food">
+                        <img src="/images/boil-egg.jpg" alt="">
+
+                        <div class="input">
+                          <h3>boil_egg</h3>
+                          <input type="number" name="boil_egg" placeholder="How much" required="true"  id="boil">
+                        </div>
+                      </div>
+
+                      <% } %>
+
+                        <% if(pokora> 0){ %>
+                          <div class="food">
+                            <img src="/images/pokora.jpg" alt="">
+
+                            <div class="input">
+                              <h3>pokora</h3>
+                              <input type="number" name="pokora" placeholder="How much" required="true" class="" id="pokora">
+                            </div>
+                          </div>
+
+                          <% } %>
+
+                            <% if(kachaegg> 0){ %>
+                              <div class="food">
+                                <img src="/images/egg.jpg" alt="">
+
+                                <div class="input">
+                                  <h3>kacha_egg</h3>
+                                  <input type="number" name="kacha_egg" placeholder="How much" required="true" id="kacha">
+                                </div>
+                              </div>
+
+                              <% } %>
+
+                                <% if(Eggfry>0){ %>
+                                  <div class="food">
+                                    <img src="/images/egg-fry.jpg" alt="">
+
+                                    <div class="input">
+                                      <h3>Egg-Fry</h3>
+                                      <input type="number" name="Egg_fry" placeholder="How much" required="true" class="" id="eggfry">
+                                    </div>
+                                  </div>
+
+                                  <% } %>
+
+                                    <% if(Eggomeletee> 0){ %>
+                                      <div class="food">
+                                        <img src="/images/egg omeletee.jpg" alt="">
+
+                                        <div class="input">
+                                          <h3>Egg-omelete</h3>
+                                          <input type="number" name="Egg_omeletee" placeholder="How much" required="true" class="" id="eggome">
+                                        </div>
+                                      </div>
+
+                                      <% } %>
+
+                                        <% if(Eggcoch> 0){ %>
+                                          <div class="food">
+                                            <img src="/images/coch.jpg" alt="">
+
+                                            <div class="input">
+                                              <h3>Egg-coch </h3>
+                                              <input type="number" name="Egg_coch" placeholder="How much" required="true"
+                                                class="" id="eggcoch">
+                                            </div>
+                                          </div>
+
+                                          <% } %>
+
+                                            <% if(bredpokora> 0){ %>
+                                              <div class="food">
+                                                <img src="/images/bred-pokora.jpg" alt="">
+
+                                                <div class="input">
+                                                  <h3>bred-pokora </h3>
+                                                  <input type="number" name="bred_pokora" placeholder="How much" required="true"
+                                                    class="" id="bred">
+                                                </div>
+                                              </div>
+
+                                              <% } %>
+          </div>
+        </div>
+        <div class="button">
+          <div class="money">
+            <h3><div id="price-display" name="price"></div></h3>
+            
+          </div>
+          <a href="">
+            <button class="btn">
+              <h1>Order</h1>
+            </button>
+          </a>
+
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const eggpokoraInput = document.getElementById('egpo');
+        const aalosamosaInput = document.getElementById('aalo');
+        const pokoraInput = document.getElementById('pokora');
+        const boilInput = document.getElementById('boil');
+        const kachaeggInput = document.getElementById('kacha');
+        const eggfryInput = document.getElementById('eggfry');
+        const EggomeleteeInput = document.getElementById('eggome');
+        const eggcochInput = document.getElementById('eggcoch');
+        const breadInput = document.getElementById('bred');
+
+        const priceDisplay = document.getElementById('price-display');
+
+        // Function to calculate and display price
+        function updatePrice() {
+            let eggpokoraQuantity = eggpokoraInput ? (eggpokoraInput.value ? parseInt(eggpokoraInput.value) : 0) : 0;
+            let aalosamosaQuantity = aalosamosaInput ? (aalosamosaInput.value ? parseInt(aalosamosaInput.value) : 0) : 0;
+            let pokoraQuantity = pokoraInput ? (pokoraInput.value ? parseInt(pokoraInput.value) : 0) : 0;
+            let boilQuantity = boilInput ? (boilInput.value ? parseInt(boilInput.value) : 0) : 0;
+            let kachaeggQuantity = kachaeggInput ? (kachaeggInput.value ? parseInt(kachaeggInput.value) : 0) : 0;
+            let eggfryQuantity = eggfryInput ? (eggfryInput.value ? parseInt(eggfryInput.value) : 0) : 0;
+            let EggomeleteeQuantity = EggomeleteeInput ? (EggomeleteeInput.value ? parseInt(EggomeleteeInput.value) : 0) : 0;
+            let eggcochQuantity = eggcochInput ? (eggcochInput.value ? parseInt(eggcochInput.value) : 0) : 0;
+            let breadQuantity = breadInput ? (breadInput.value ? parseInt(breadInput.value) : 0) : 0;
+
+            const totalPrice = (eggpokoraQuantity * 5) + (aalosamosaQuantity * 2.5) + (boilQuantity * 8) + (pokoraQuantity * 1) + (kachaeggQuantity * 6) + (eggfryQuantity * 10) + (EggomeleteeQuantity * 10) + (eggcochQuantity * 10) + (breadQuantity * 5);
+
+            priceDisplay.textContent = `${totalPrice}`;
+        }
+
+        // Add event listeners to update price when quantity changes
+        if (eggpokoraInput) eggpokoraInput.addEventListener('input', updatePrice);
+        if (aalosamosaInput) aalosamosaInput.addEventListener('input', updatePrice);
+        if (pokoraInput) pokoraInput.addEventListener('input', updatePrice);
+        if (boilInput) boilInput.addEventListener('input', updatePrice);
+        if (kachaeggInput) kachaeggInput.addEventListener('input', updatePrice);
+        if (eggfryInput) eggfryInput.addEventListener('input', updatePrice);
+        if (EggomeleteeInput) EggomeleteeInput.addEventListener('input', updatePrice);
+        if (eggcochInput) eggcochInput.addEventListener('input', updatePrice);
+        if (breadInput) breadInput.addEventListener('input', updatePrice);
+
+        // Initial update when page loads
+        updatePrice();
+    });
+
+</script>
+
+
+
+ 
+  
+</body>
+
+</html>

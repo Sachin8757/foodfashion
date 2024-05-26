@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/allfeedback.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box background">
+        <div class="contaner">
+            <% contact.forEach(function(contact){ %>
+                <div class="box2">
+                <h3 class="data">Name:- <%=contact.name%></h3>
+                <h3 class="data">Phone No:- <%=contact.phone%></h3>
+                <h3 class="data">Email Id:- <%=contact.email%></h3>
+                <hr>
+                <p class="feed"> <%=contact.msg%></p>
+            </div>
+           <% })%>
+        </div>
+    </div>
+</body>
+</html>

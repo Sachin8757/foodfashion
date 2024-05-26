@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    background: rgb(255, 255, 255)url(/images/background.jpg);
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.main {
+    width: 100vmax;
+    /* height: 750px; */
+}
+
+/* here i create a css for card */
+.card {
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+
+    box-shadow: 0px 0px 10px black;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    background-color: rgb(224, 222, 222);
+}
+
+.card-body {
+    max-width: 975px;
+    margin: 20px auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.heder {
+    font-size: 25px;
+    color: black;
+    line-height: 1rem;
+    margin-bottom: 0.3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.para-text {
+    font-size: 20px;
+    color: #2304ba;
+}
+
+.card-buttom {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.order {
+    margin-left: 610px;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    color: #0b6a4b;
+}
+
+.order:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid black;
+    height: 30px;
+    background-color: transparent;
+}
+
+
+.loction {
+    margin: 10px;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid black;
+    height: 30px;
+    background-color: transparent;
+}
+
+.btn {
+    width: 320px;
+    height: 45px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: yellow;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn:hover{
+    color: blue;
+}
+
+.address {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.adr {
+    width: 320px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+}
+.adr input{
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+    border-bottom: 2px solid black;
+}
+
+.adr:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+/* media for card */
+@media(max-width:980px) {
+    .card-body {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 100px;
+    }
+
+    .order {
+        margin-left: 224px;
+    }
+
+    .main {
+        width: 800px;
+    }
+
+}
+
+
+@media(max-width:480px) {
+    .card-body {
+        grid-template-columns: repeat(1, 1fr);
+        /* height: 200px; */
+        margin: 18px;
+    }
+
+    .card {
+        width: 350px;
+    }
+
+    .order {
+        margin-left: 20px;
+    }
+
+    .main {
+        width: 400px;
+    }
+
+}
+
+/* @media(max-width:815px){
+    .card-body{
+        grid-template-columns: repeat(2,1fr);
+        margin:100px;
+    }
+    .card{
+    width: 350px;
+    }
+    .order{
+    margin-left: 20px;
+    }
+
+} */
+
+
+
+.hello{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.hello input{
+    width: 50px;
+    height: 30px;
+}
+.hello h3{
+    font-size: 25px;
+}

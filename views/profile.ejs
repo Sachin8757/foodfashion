@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
+    <link rel="stylesheet" href="/stylesheets/display.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main background">
+        <div class="box1">
+            <i class="acount fa fa-user-circle fa-5x"></i>
+            <% if(user.username =="sachin"){ %>
+                <h2 class="username">Welcome Boss</h2>
+                <a href="/allorders">
+                 <button class="btn">All-Orders</button>
+                </a>
+
+                <a href="/alluser">
+                    <button class="btn">All-User</button>
+                </a>
+                <a href="/allfeedback">
+                    <button class="btn">All feedback</button>
+                </a>
+                <a href="/allcontact">
+                    <button class="btn">All Contact</button>
+                </a>
+                <a href="/logout">
+                    <button class="btn">logout</button>
+                </a>
+             <% }else{ %>
+                <h2 class="username">Hey,<%=user.username%></h2>
+                <a href="/logout">
+                    <button class="btn">logout</button>
+                </a>
+                <a href="/order">
+                    <button class="btn">Order</button>
+                </a> 
+                <a href="/myorder">
+                    <button class="btn">My order</button>
+                </a>
+                <h1 class="username">Userdetails</h1>
+                <h2 class="details">Full-Name :-<%=user.fullname%></h2>
+                <h2 class="details">MobileNo :-<%=user.phoneno%></h2>
+                <h2 class="details">Email Id :-<%=user.email%></h2>
+                <% } %>
+
+
+        </div>
+    </div>
+</body>
+</html>

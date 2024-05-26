@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/register.css">
+    <link rel="stylesheet" href="/stylesheets/display.css">
+</head>
+<body>
+    <div class="box1 background">
+        <form action="/register" method="post">
+        <div class="box2">
+            
+            <h1>Register</h1>
+            <%if(finduser !=null){%>
+                <p class="error">Username already exist</p>
+                <p class="error">Change username</p>
+                <%}%>
+            <input type="text" name="fullname" placeholder="Full-name" class="input"require="true">
+            <input type="text" name="username" placeholder="User-name" class="input"require="true">
+            <input type="password" name="password" placeholder="password" class="input"require="true">
+            <input type="text" name="phoneno" placeholder="Phone-Number" class="input"require="true">
+            <input type="text" name="email" placeholder="Email-Id" class="input"require="true">
+            <div class="box3">
+                <input type="checkbox" class="checkbox"require="true">Remember Me
+            </div>
+            <button class="btn">Register</button>
+          </form>
+        <a href="/login">Login account to show more</a>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

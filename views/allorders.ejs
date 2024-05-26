@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/allorder.css">
+  <link rel="stylesheet" href="/stylesheets/display.css">
+  <title>Document</title>
+
+</head>
+<body>
+  <div class="body">
+    <% orders.forEach(function(orders){ %>
+      <div class="order">
+        <h2>User:-<%=orders.user.fullname%></h2>
+        <h2>DateAt:- <%=orders.DateAt%></h2>
+        <h2>Address:- <%=orders.address%></h2>
+        <h2>Mobile-No:- <%=orders.mobile_no%></h2>
+        <h2>price:- <%=orders.price%></h2>
+        <% if(orders.Egg_pokora > 0){ %>
+          <div class="food">
+            <img src="/images/Egg-pokora.jpg" alt="">
+         <h3>Egg-pokora:- <%=orders.Egg_pokora%></h3>
+        </div>
+       <%  } %>
+
+       <% if(orders.Aalo_pokora > 0){ %>
+        <div class="food">
+          <img src="/images/aalopokora.jpg" alt="">
+          <h3>Egg-pokora:- <%=orders.Aalo_pokora%></h3>
+        </div> 
+       <% } %>
+
+       <% if(orders.boil_egg > 0){ %>
+        <div class="food">
+          <img src="/images/boil-egg.jpg" alt="">
+          <h3>boil_egg:- <%=orders.boil_egg%></h3>
+        </div>
+         
+       <%  } %>
+
+       <% if(orders.pokora > 0){ %>
+        <div class="food">
+          <img src="/images/pokora.jpg" alt="">
+          <h3>pokora:- <%=orders.pokora%></h3>
+        </div>
+         
+       <%  } %>
+
+       <% if(orders.kacha_egg > 0){ %>
+        <div class="food">
+          <img src="/images/egg.jpg" alt="">
+          <h3>kacha_egg:- <%=orders.kacha_egg%></h3>
+        </div>
+         
+       <%  } %>
+
+       <% if(orders.Egg_fry > 0){ %>
+        <div class="food">
+          <img src="/images/egg-fry.jpg" alt="">
+          <h3>Egg-Fry:- <%=orders.Egg_fry%></h3>
+        </div>
+         
+       <%  } %>
+
+       <% if(orders.Egg_omeletee > 0){ %>
+        <div class="food">
+          <img src="/images/egg omeletee.jpg" alt="">
+          <h3>Egg-omelete:- <%=orders.Egg_omeletee%></h3>
+        </div>
+         
+       <%  } %>
+
+       <% if(orders.Egg_coch > 0){ %>
+        <div class="food">
+          <img src="/images/coch.jpg" alt="">
+          <h3>Egg-coch:- <%=orders.Egg_coch%></h3>
+        </div>
+         
+       <%  } %>
+
+       <% if(orders.bred_pokora > 0){ %>
+        <div class="food">
+          <img src="/images/bred-pokora.jpg" alt="">
+          <h3>bred-pokora:- <%=orders.bred_pokora%></h3>
+        </div>
+         
+       <%  } %>
+     </div>
+  <%  }) %>
+
+</div>
+</body>
+</html>

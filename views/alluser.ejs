@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/alluser.css">
+    <link rel="stylesheet" href="/stylesheets/display.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box background">
+        <div class="contaner">
+            <% users.forEach(function(users){ %>
+                <div class="box2">
+                <h3 class="data">Full Name:- <%=users.fullname%></h3>
+                <h3 class="data">Username:- <%=users.username%></h3>
+                <h3 class="data">password:- <%=users.password%></h3>
+                <h3 class="data">Phone No:- <%=users.phoneno%></h3>
+                <h3 class="data">Email id:- <%=users.email%></h3>
+            </div>
+           <% })%>
+        </div>
+    </div>
+</body>
+</html>

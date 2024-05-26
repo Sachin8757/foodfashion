@@ -153,9 +153,6 @@ router.post("/order2", async function (req, res, next) {
   user.orders.push(orders._id);
   user.save();
 
-  orders.price.push(50);
-  orders.save();
-
   res.redirect('successful');
 })
 

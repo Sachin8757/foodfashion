@@ -1,0 +1,16 @@
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    /* Add your CSS rules for mobile devices here */
+    .main {
+      width: 100%; /* Example */
+    }
+  }
+  
+  /* For desktops and larger devices */
+  @media only screen and (min-width: 601px) {
+    /* Add your CSS rules for desktop devices here */
+    .main {
+      width: 80%; /* Example */
+    }
+  }
+  

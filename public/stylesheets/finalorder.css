@@ -10,7 +10,7 @@
   @media only screen and (min-width: 601px) {
     /* Add your CSS rules for desktop devices here */
     .main {
-      width: 80%; /* Example */
+      width: 100%; /* Example */
     }
   }
   

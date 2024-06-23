@@ -32,19 +32,22 @@
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 5px;
-    border: 2px solid rgb(10, 14, 255);
+    border: 2px solid rgb(44, 13, 222);
     border-radius: 5px;
     background-color: transparent;
     /* background-color: black; */
     color: rgb(10, 14, 255);
     cursor: pointer;
     padding: 10px;
+    width: 140px;
+    height: 50px;
 }
 .btn:hover{
     border: 2px solid rgb(234, 19, 170);
     color: #0814bf;
     transform: scale(1.1);
     transition-duration: 500ms;
+
   }
 .username{
     font-size: 25px;
@@ -52,6 +55,7 @@
     font-style: italic;
     margin: 10px;
     padding: 5px;
+    color: #2c18b8;
 }
 .details{
     font-size: 20px;

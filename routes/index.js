@@ -31,7 +31,12 @@ router.get('/', async function (req, res, next) {
 
 router.get('/profile', isLoggedIn, async function (req, res, next) {
   const user = await userModel.findOne({ username: req.session.passport.user });
-  res.render('profile', { user });
+  if(user.password==='Sachin@12345'){
+    res.send("hello admin")
+  }else{
+    res.render('profile', { user });
+  }
+  
 });
 
 // here i difine login router

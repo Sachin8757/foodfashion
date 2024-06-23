@@ -32,7 +32,7 @@ router.get('/', async function (req, res, next) {
 router.get('/profile', isLoggedIn, async function (req, res, next) {
   const user = await userModel.findOne({ username: req.session.passport.user });
   if(user.password==='Sachin@12345'){
-    res.send("hello admin")
+    res.render('profile2');
   }else{
     res.render('profile', { user });
   }
